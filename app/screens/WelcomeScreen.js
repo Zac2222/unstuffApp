@@ -1,5 +1,14 @@
-import { View, ImageBackground, StyleSheet, Image, Text, Button, Pressable } from "react-native";
-import color from "../config/color";
+import {
+  View,
+  ImageBackground,
+  StyleSheet,
+  Image,
+  Text,
+  Button,
+  Pressable,
+} from "react-native";
+import colors from "../config/colors";
+import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
@@ -12,17 +21,26 @@ function WelcomeScreen(props) {
         source={require("../assets/UnStuffLogo.png")}
       />
       <Text style={styles.tagline}>Unstuff Your Life</Text>
+      <AppButton
+        color={colors.primary}
+        title={"Login"}
+        onPress={() => console.log("Pressed")}
+      />
+      <AppButton
+        color="secondary"
+        title={"Register"}
+        onPress={() => console.log("Pressed")}
+      />
       {/* <Button style={styles.loginButton}> */}
       {/* <View style={styles.loginButton} />
       <View style={styles.registerButton} /> */}
 
-<Pressable style={styles.loginButton}>
+      <Pressable style={styles.loginButton}>
         <Text style={styles.button}>Login</Text>
       </Pressable>
       <Pressable style={styles.registerButton}>
         <Text style={styles.button}>Register</Text>
       </Pressable>
-
     </ImageBackground>
   );
 }
@@ -36,25 +54,23 @@ const styles = StyleSheet.create({
   loginButton: {
     width: "100%",
     height: 70,
-    backgroundColor: color.primary,
+    backgroundColor: colors.primary,
     borderRadius: 40,
-
   },
   registerButton: {
     width: "100%",
     height: 70,
-    backgroundColor: color.secondary,
+    backgroundColor: colors.secondary,
     borderRadius: 40,
     margin: 10,
   },
   button: {
     fontSize: 25,
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
     padding: 20,
-    textTransform: 'uppercase',
-   
+    textTransform: "uppercase",
   },
   logo: {
     width: 200,
