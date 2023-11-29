@@ -4,18 +4,24 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import SaleScreen from "./app/screens/SaleScreen";
 import Card from "./app/components/Card";
+import ListingDetailScreen from "./app/screens/ListingDetailScreen";
+import MessageScreen from "./app/screens/MessageScreen";
+import 'react-native-gesture-handler';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import Screen from "./app/components/Screen";
+import Icon from "./app/components/Icon";
+import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
+
 
 export default function App() {
   return (
     // <WelcomeScreen />
     // <ViewImageScreen />
     // <SaleScreen />
-    <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
-      <Card
-        title="Jean Jacket for sale"
-        subTitle="$100"
-        image={require("./app/assets/jeanJacket.jpg")}
-      />
-    </View>
+    // <ListingDetailScreen/>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <AccountScreen/>
+    </GestureHandlerRootView>
   );
 }
