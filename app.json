@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "unstuffApp",
-    "slug": "unstuffApp",
+    "slug": "unstuffapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -25,6 +25,18 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c1824835-97de-43af-8966-a3232f4c3e5d"
+      }
+    },
+    "owner": "zac2222",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c1824835-97de-43af-8966-a3232f4c3e5d"
     }
   }
 }
